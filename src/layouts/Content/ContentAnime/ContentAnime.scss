@@ -1,0 +1,47 @@
+.content__heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    height: 32px;
+    h2 {
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        padding-left: 15px;
+        letter-spacing: 2px;
+    }
+}
+
+// view column
+
+.content__heading--view {
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    .content__heading--view-icon {
+        display: flex;
+    }
+}
+
+// Week column
+
+.content__heading_week {
+    display: flex;
+    gap: 10px;
+
+    .no-active {
+        color: #b7b7b7;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    .no-active.active {
+        color: var(--color-white);
+    }
+}

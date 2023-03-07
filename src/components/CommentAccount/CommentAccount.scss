@@ -1,0 +1,42 @@
+.comment__content {
+    color: #0b0c2a;
+    display: flex;
+    padding: 10px 0;
+    img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    border-bottom: 1px solid rgba(181, 181, 181, 0.3);
+}
+
+.comment__content--block {
+    padding-left: 15px;
+    flex: 1;
+
+    p {
+        padding: 4px 0;
+    }
+}
+
+.comment__content--feedback {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 12px;
+
+    span {
+        cursor: pointer;
+    }
+
+    .comment__content--feedback-action {
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    .comment-time {
+        color: #696969;
+    }
+}

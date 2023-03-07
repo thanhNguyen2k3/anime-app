@@ -1,0 +1,74 @@
+.wrapper__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: var(--width-default);
+    margin: 0 auto;
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.banner {
+    background-image: url('banner.jpg');
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+
+    .banner__inner {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.wrapper__form--btn-action {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .wrapper__form--btn-action-account {
+        position: relative;
+        display: flex;
+        color: var(--color-white);
+        width: 460px;
+        margin-bottom: 15px;
+
+        button {
+            cursor: pointer;
+            width: 100%;
+            background-color: transparent;
+            color: var(--color-white);
+            padding: 14px 0;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+
+            .wrapper__form--btn-action-icon {
+                position: absolute;
+                left: 20px;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.bg-fb {
+    background-color: #4267b2;
+}
+
+.bg-google {
+    background-color: #ff4343;
+}
+
+.bg-tw {
+    background-color: #1da1f2;
+}

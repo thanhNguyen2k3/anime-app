@@ -1,0 +1,41 @@
+.new__series {
+    display: flex;
+    padding: 0 15px;
+    gap: 16px;
+    align-items: center;
+}
+
+.new__series--pic {
+    img {
+        width: 90px;
+        height: 120px;
+        object-fit: cover;
+    }
+}
+
+.new__series--cate {
+    display: flex;
+    gap: 6px;
+    span {
+        background-color: #ffffff33;
+        border-radius: 999px;
+        font-size: 1rem;
+        padding: 2px 12px;
+    }
+}
+
+.new__series--title {
+    font-size: 1.8rem;
+    padding: 6px 0;
+    a {
+        color: var(--color-white);
+    }
+}
+
+.new__series--view {
+    font-size: 1.3rem;
+    color: #b7b7b7;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

@@ -1,0 +1,38 @@
+.search__result {
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #18184a;
+    padding: 10px 0;
+}
+
+.search__result--block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: #202057;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search__result--title {
+        cursor: pointer;
+        padding-left: 10px;
+        flex: 1;
+
+        h5 {
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}

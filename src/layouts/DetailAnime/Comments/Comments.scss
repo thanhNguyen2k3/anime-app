@@ -1,0 +1,20 @@
+.comments {
+    background-color: var(--color-white);
+    margin: 0 15px;
+    padding: 0 15px;
+    border-radius: 2px;
+    max-height: 800px;
+}
+
+.comment__submit {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#comment {
+    resize: none;
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 3px;
+}

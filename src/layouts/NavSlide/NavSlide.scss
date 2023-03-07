@@ -1,0 +1,148 @@
+.container__slides {
+    position: relative;
+    padding: 0 15px;
+    width: var(--width-default);
+    margin: 0 auto;
+}
+
+.slides {
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.slides__nav {
+    display: flex;
+    width: 500%;
+    transform: translate3d(0, 0, 0);
+    // transition: all 1s;
+}
+
+.slides__nav--item {
+    position: relative;
+
+    img {
+        width: 1160px;
+        max-height: 560px;
+        object-fit: cover;
+    }
+}
+
+.slide__nav--item-block {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    right: 50%;
+    line-height: 2;
+
+    h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    p {
+        margin-bottom: 40px;
+        margin-top: 8px;
+    }
+}
+
+.watch-btn {
+    position: relative;
+    color: var(--color-white);
+    background-color: transparent;
+    font-size: 1.3rem;
+    padding: 22px 32px;
+    font-weight: 800;
+    font-family: 'Mulish', sans-serif;
+    border-radius: 4px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    box-shadow: 2px 6px 10px rgba(236, 48, 48, 0.3);
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+
+    .custom-svg {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        fill: none;
+        stroke: #fff;
+        stroke-dasharray: 150 480;
+        stroke-dashoffset: 150;
+        animation: dash 2s ease infinite;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--color-primary);
+        transition: all 1s;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
+
+.owl-items {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    .owl-item {
+        width: 60px;
+        height: 5px;
+        background-color: transparent;
+        border-radius: 3px;
+        border: 1px solid;
+        border-color: var(--color-primary);
+        cursor: pointer;
+    }
+
+    .owl-item.active {
+        background-color: var(--color-primary);
+    }
+}
+
+.slide__btns {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    button {
+        cursor: pointer;
+        background-color: #242540;
+        color: var(--color-white);
+        width: 66px;
+        height: 66px;
+        transform: rotate(45deg);
+        border: 6px solid #0b0c2a;
+        svg {
+            transform: rotate(-45deg);
+        }
+
+        &:active {
+            background-color: #0b0c2a;
+        }
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -480;
+    }
+}

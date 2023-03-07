@@ -1,0 +1,94 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #e53637;
+    --color-white: #fff;
+    --color-bg-header: #070720;
+    --color-secondary: #b7b7b7;
+
+    // layout
+
+    --width-default: 1170px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Mulish', sans-serif;
+    scroll-behavior: smooth;
+}
+
+// css scroll bar
+
+::-webkit-scrollbar {
+    width: 4px;
+    padding: 3px;
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10px;
+    opacity: 0.8;
+    background: var(--color-primary);
+}
+
+::-webkit-scrollbar-track {
+    padding: 3px;
+}
+
+//
+
+body {
+    line-height: 1.6;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    color: var(--color-white);
+    background-color: #0b0c2a;
+    color: var(--color-white);
+
+    .tippy-custom {
+        pointer-events: all;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+button {
+    border: 0;
+}
+
+.separate {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-primary);
+}
+
+._flex {
+    display: flex;
+}
+
+// Css Tippy

@@ -1,0 +1,16 @@
+.wrapper__detail {
+    width: var(--width-default);
+    margin: 0 auto;
+
+    .row-2 {
+        display: flex;
+
+        .col-left {
+            width: 780px;
+        }
+
+        .col-right {
+            flex: 1;
+        }
+    }
+}

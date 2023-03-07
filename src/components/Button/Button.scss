@@ -1,0 +1,33 @@
+.wrapper__button {
+    min-width: 100px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    padding: 14px 26px;
+
+    display: inline-flex;
+    align-items: center;
+    color: currentColor;
+    cursor: pointer;
+
+    .wrapper__button--title {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .wrapper__button--icon {
+        display: flex;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+}
+
+.wrapper__button--left-icon + .wrapper__button--title {
+    margin-left: 6px;
+}
+
+.wrapper__button--title + .wrapper__button--right-icon {
+    margin-left: 6px;
+}

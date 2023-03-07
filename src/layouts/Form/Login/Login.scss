@@ -1,0 +1,48 @@
+.form__element {
+    display: flex;
+}
+
+.form__login {
+    border-right: 1px solid #ffffff33;
+    padding-right: 60px;
+    max-width: 460px;
+    min-width: 460px;
+
+    figcaption {
+        margin-top: 10px;
+        a {
+            color: var(--color-primary);
+        }
+    }
+
+    .sign-in-success {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: (#097936);
+        padding: 6px 6px;
+    }
+}
+
+.form__login--action {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.button__form {
+    margin-top: 20px;
+    background-color: var(--color-primary);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    padding: 14px 38px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.no__account {
+    padding-left: 60px;
+    flex: 1;
+}
