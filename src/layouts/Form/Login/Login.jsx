@@ -5,6 +5,7 @@ import { LockIcon, MailIcon } from '../../../components/Icons/Icon';
 import Button from '../../../components/Button/Button';
 import './Login.scss';
 import ToastMessage from '../../../components/ToastMessage';
+import axios from 'axios';
 function Login() {
     const [values, setValues] = useState({
         username: '',
@@ -13,6 +14,8 @@ function Login() {
     const [valueInput, setValueInput] = useState([]);
     const [messageSuccess, setMessageSuccess] = useState(false);
     const [messageError, setMessageError] = useState(false);
+    const SESSION = window.sessionStorage;
+
     const inputs = [
         {
             id: 1,
@@ -40,6 +43,8 @@ function Login() {
         valueInput.map((account) => {
             if (values.username === account.username && values.password === account.password) {
                 setMessageSuccess(true);
+                SESSION.setItem('username', account.username);
+                SESSION.setItem('password', account.password);
                 console.log(account);
             } else {
                 setMessageError(true);
@@ -52,16 +57,14 @@ function Login() {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:3000/accounts`)
-            .then((res) => res.json())
-            .then((accounts) => setValueInput(accounts));
-    }, []);
+        axios.get('http://localhost:3000/accounts').then((data) => setValueInput(data.data));
+    }, [valueInput]);
 
     useEffect(() => {
         setTimeout(() => {
             setMessageSuccess(false);
             setMessageError(false);
-        }, 3000);
+        }, 4000);
     }, [messageError, messageSuccess]);
 
     return (

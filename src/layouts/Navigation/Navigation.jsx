@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 
 import './Navigation.scss';
@@ -16,7 +16,7 @@ function Navigation() {
         setShowAccount(!showAccount);
     };
 
-    const USER_ACCESS = true;
+    const USER_ACCESS = false;
 
     return (
         <header>
