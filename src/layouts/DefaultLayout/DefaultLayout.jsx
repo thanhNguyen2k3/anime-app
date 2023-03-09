@@ -1,5 +1,6 @@
 import Footer from '../Footer';
 import Navigation from '../Navigation';
+import TopSeries from '../Content/TopSeries';
 import './Global.scss';
 
 function DefaultLayout({ children }) {
@@ -9,6 +10,7 @@ function DefaultLayout({ children }) {
             <div className="content" style={{ minHeight: '1000px' }}>
                 {children}
             </div>
+
             <Footer />
         </div>
     );

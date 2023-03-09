@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 
 import './Navigation.scss';
@@ -7,6 +7,13 @@ import Search from '../Search';
 function Navigation() {
     const [search, setSearch] = useState(false);
     const [showAccount, setShowAccount] = useState(false);
+    const [userAccess, setUserAccess] = useState(false);
+
+    const LOCAL_STORAGE_USER = window.localStorage;
+    const GET_STORAGE = LOCAL_STORAGE_USER.getItem('info');
+    const CONVERT_STORAGE = JSON.parse(GET_STORAGE);
+
+    console.log(CONVERT_STORAGE);
 
     const handleShowSearch = () => {
         setSearch(!search);
@@ -16,7 +23,17 @@ function Navigation() {
         setShowAccount(!showAccount);
     };
 
-    const USER_ACCESS = false;
+    const handleLogout = () => {
+        LOCAL_STORAGE_USER.clear();
+    };
+
+    useEffect(() => {
+        if (LOCAL_STORAGE_USER.getItem('info')) {
+            setUserAccess(true);
+        } else {
+            setUserAccess(false);
+        }
+    }, []);
 
     return (
         <header>
@@ -78,7 +95,7 @@ function Navigation() {
                         {<SearchIcon />}
                     </button>
 
-                    {USER_ACCESS ? (
+                    {userAccess ? (
                         <div className="_flex">
                             <Tippy
                                 interactive
@@ -90,7 +107,7 @@ function Navigation() {
                                     <div className="account__show" tabIndex="-1" {...attrs}>
                                         <ul>
                                             <li>
-                                                <a href="/">
+                                                <a href="/login">
                                                     <span>
                                                         <UserIcon />
                                                     </span>
@@ -98,7 +115,7 @@ function Navigation() {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/">
+                                                <a href="/" onClick={handleLogout}>
                                                     <span>
                                                         <LogoutIcon />
                                                     </span>
@@ -110,7 +127,7 @@ function Navigation() {
                                 )}
                             >
                                 <div className="account__access">
-                                    <img src="./user-img.jpg" alt="" />
+                                    <img src={CONVERT_STORAGE.photoURL} alt="" />
                                 </div>
                             </Tippy>
                         </div>

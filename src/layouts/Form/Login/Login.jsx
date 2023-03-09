@@ -1,27 +1,29 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { auth } from '../../../config/firebase-config';
 
 import FormInput from '../../../components/FormInput/FormInput';
 import { LockIcon, MailIcon } from '../../../components/Icons/Icon';
 import Button from '../../../components/Button/Button';
-import './Login.scss';
 import ToastMessage from '../../../components/ToastMessage';
-import axios from 'axios';
-function Login() {
+import './Login.scss';
+
+function Login(id) {
     const [values, setValues] = useState({
-        username: '',
+        email: '',
         password: '',
     });
     const [valueInput, setValueInput] = useState([]);
     const [messageSuccess, setMessageSuccess] = useState(false);
     const [messageError, setMessageError] = useState(false);
-    const SESSION = window.sessionStorage;
+    const SESSION = window.localStorage;
 
     const inputs = [
         {
             id: 1,
-            name: 'username',
-            type: 'text',
-            placeholder: 'Username',
+            name: 'email',
+            type: 'email',
+            placeholder: 'Email',
             icon: <MailIcon />,
             errorMessage: 'Không được bỏ trống',
             required: true,
@@ -38,27 +40,26 @@ function Login() {
     ];
 
     const handleLogin = (e) => {
-        e.preventDefault();
-
-        valueInput.map((account) => {
-            if (values.username === account.username && values.password === account.password) {
-                setMessageSuccess(true);
-                SESSION.setItem('username', account.username);
-                SESSION.setItem('password', account.password);
-                console.log(account);
-            } else {
-                setMessageError(true);
-            }
-        });
+        // e.preventDefault();
+        // valueInput.map((account) => {
+        //     if (values.username === account.username && values.password === account.password) {
+        //         setMessageSuccess(true);
+        //         SESSION.setItem('info', JSON.stringify({ ...account }));
+        //         setTimeout(() => window.history.back(), 2000);
+        //         console.log(account);
+        //     } else {
+        //         setMessageError(true);
+        //     }
+        // });
     };
 
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 
-    useEffect(() => {
-        axios.get('http://localhost:3000/accounts').then((data) => setValueInput(data.data));
-    }, [valueInput]);
+    // useEffect(() => {
+    //     axios.get('http://localhost:3000/accounts').then((data) => setValueInput(data.data));
+    // }, []);
 
     useEffect(() => {
         setTimeout(() => {

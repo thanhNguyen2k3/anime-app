@@ -1,14 +1,29 @@
+.form__login_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    label {
+        display: inline-block;
+        width: 200px;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        opacity: 0.8;
+    }
+}
+
 .form__login--label {
     position: relative;
+    display: flex;
     width: 100%;
     background-color: var(--color-white);
-    margin-bottom: 10px;
     border: 1px solid transparent;
     padding-left: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 6px;
 
     p {
         display: none;
@@ -28,12 +43,22 @@
         }
     }
 
+    input[name='image'] {
+        display: block;
+    }
+
     .form__login--label-icon {
         position: absolute;
+        display: flex;
         left: 10px;
+        width: 36px;
         font-size: 2rem;
         color: #b7b7b7;
         border-right: 1px solid #b7b7b7;
         padding-right: 10px;
     }
+}
+
+.disable {
+    cursor: not-allowed;
 }

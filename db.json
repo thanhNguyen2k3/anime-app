@@ -1,17 +1,3 @@
 {
-    "accounts": [
-        {
-            "id": 1,
-            "username": "thanh",
-            "email": "thanhs2fo4@gmail.com",
-            "password": "@19112k3Az"
-        },
-        {
-            "username": "thanh123",
-            "email": "thanh@example.com",
-            "password": "@19112k3Az",
-            "confirmPassword": "@19112k3Az",
-            "id": 2
-        }
-    ]
+    "accounts": []
 }
