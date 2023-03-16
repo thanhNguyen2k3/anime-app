@@ -13,8 +13,6 @@ function Navigation() {
     const GET_STORAGE = LOCAL_STORAGE_USER.getItem('info');
     const CONVERT_STORAGE = JSON.parse(GET_STORAGE);
 
-    console.log(CONVERT_STORAGE);
-
     const handleShowSearch = () => {
         setSearch(!search);
     };

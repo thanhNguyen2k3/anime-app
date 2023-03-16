@@ -5,6 +5,7 @@ import DetailPage from '../pages/DetailPage';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
+import WatchingPage from '../pages/WatchingPage';
 
 const publicPrivate = [
     { path: '/', component: HomePage },
@@ -14,6 +15,7 @@ const publicPrivate = [
     { path: '/login', component: LoginPage },
     { path: '/register', component: RegisterPage },
     { path: '/detail', component: DetailPage },
+    { path: '/watch', component: WatchingPage },
 ];
 
 const privateRoutes = [];

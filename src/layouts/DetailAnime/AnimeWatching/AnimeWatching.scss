@@ -1,0 +1,104 @@
+.wrapper__watch {
+    width: var(--width-default);
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.wrapper__watch_episode {
+    margin-top: 20px;
+    border-radius: 3px;
+    gap: 16px;
+    background-color: #131516;
+    padding: 10px;
+
+    .wrapper__watch_episode--title {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .wrapper__watch_episode--element {
+        max-height: 100px;
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .wrapper__watch_episode--element a {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--color-white);
+        background-color: #ffffff33;
+        padding: 6px 26px;
+        border-radius: 3px;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: var(--color-primary);
+        }
+    }
+}
+
+.wrapper__watch_poster {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.wrapper__watch_poster--col-left {
+    img {
+        width: 260px;
+        height: 360px;
+        object-fit: cover;
+    }
+    z-index: 2;
+}
+
+.wrapper__watch_poster--col-right {
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.wrapper__watch_poster--title {
+    color: #b5e745;
+}
+
+.wrapper__watch_poster--subtitle {
+    font-size: 1.6rem;
+    padding: 10px 0;
+}
+
+.wrapper__watch_poster--description {
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+
+.wrapper__watch_poster--rate {
+    position: absolute;
+    bottom: 20px;
+    color: var(--color-primary);
+    color: #e89f12;
+    font-size: 3rem;
+}
+
+.wrapper__watch_poster--layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    object-fit: cover;
+}
